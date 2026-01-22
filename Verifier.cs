@@ -14,15 +14,37 @@ public class Verifier
 }
 
 
-public string IsVehicle(bool hasWheels, bool canFly, bool canSwim)
-{
-    // Returns "is vehicle" if at least one parameter is true
-    if (hasWheels || canFly || canSwim)
+    public string IsVehicle(bool hasWheels, bool canFly, bool canSwim)
     {
-        return "is vehicle";
+        // Check if hasWheels is true
+        if (hasWheels)
+        {
+            // hasWheels is true, so it's a vehicle regardless of others
+            return "is vehicle";
+        }
+        else
+        {
+            // hasWheels is false, now check canFly
+            if (canFly)
+            {
+                // canFly is true, so it's a vehicle
+                return "is vehicle";
+            }
+            else
+            {
+                // hasWheels is false AND canFly is false, now check canSwim
+                if (canSwim)
+                {
+                    // canSwim is true, so it's a vehicle
+                    return "is vehicle";
+                }
+                else
+                {
+                    // All three are false
+                    return "";
+                }
+            }
+        }
     }
 
-    // Returns an empty string if all parameters are false
-    return "";
-}
 
