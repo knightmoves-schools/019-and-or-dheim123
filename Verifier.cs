@@ -1,4 +1,5 @@
-﻿namespace knightmoves;
+namespace knightmoves;
+
 public class Verifier
 {
     public string Taxable(string state, bool taxExempt)
@@ -11,7 +12,6 @@ public class Verifier
         return "";
     }
 
-
     public string IsVehicle(bool hasWheels, bool canFly, bool canSwim)
     {
         if (hasWheels || canFly || canSwim)
@@ -21,7 +21,4 @@ public class Verifier
     
         return "";
     }
-
-
-
-
+}
